@@ -1,4 +1,30 @@
+body{
+    background-color: #3D2E31;
+}
+
+
 .content{
-    text-align: center;
+    display: flex;
+    gap: 50px;
+    padding: 25px;
+}
+
+a {
+    margin: 60px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-family:'Courier New', Courier, monospace ;
+    font-size: 20px;
+}
+
+.logo{
+    height: 100px;
+}
+
+.button{
     
+
 }
