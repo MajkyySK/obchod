@@ -4,6 +4,14 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("WZDjXV.jpg") no-repeat;
+    background-position: center;
+}
 
 header {
     position: fixed;
@@ -63,6 +71,37 @@ header {
 background: white;
 color: black
 }
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+ }
+.form-box h2 {
+    font-size: 2em;
+    color: black;
+    text-align: center;
+}
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+
 
 
 
