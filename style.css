@@ -130,6 +130,14 @@ color: black
     margin: 30px 0;
 }
 
+.home{
+    border: 2px solid white;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    opacity: 25%;
+}
+
 
 
 
