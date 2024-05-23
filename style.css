@@ -8,8 +8,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(WZDjXV.jpg);
     flex-direction: column;
+    background-color: black;
 }
 
 header{
@@ -101,7 +101,6 @@ color: black
 }
 
 .wrapper {
-    position: relative;
     width: 400px;
     height: 440px;
     background: transparent;
@@ -114,13 +113,13 @@ color: black
     align-items: center;
  }
  .wrapper .form-box {
-    width: 100%;
     padding: 40px;
  }
 .form-box h2 {
     font-size: 2em;
-    color: black;
+    color: white;
     text-align: center;
+    opacity: 100%;
 }
 .input-box {
     position: relative;
@@ -131,11 +130,14 @@ color: black
 }
 
 .home{
+    display: flex;
+    justify-content: center;
     border: 2px solid white;
     width: 70%;
     height: 100vh;
-    background-color: white;
-    opacity: 25%;
+    background-color: grey;
+    padding-top: 20px;
+
 }
 
 
