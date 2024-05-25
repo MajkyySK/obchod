@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
+    .mySlides{display: none;}
 }
 body {
     display: flex;
@@ -141,10 +142,105 @@ color: black
 
 }
 
-
-
-
-
-.slideshow-container{
-    width: 75%;
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 75px;
 }
+
+.prev, .next {
+
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: 75px;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+}
+
+.next{
+    left: 155vh;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev{
+    right: 154vh;
+    border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+    color: grey;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.imgnumber {
+    color: grey;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.dot-container{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    right: 42.5%;
+    top: 15%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 100%;
+    display: inline-flex;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+.thumbnail{
+    position: relative;
+    width: 100vh;
+    height: 50vh;
+    left: 2vh;
+
+}
+

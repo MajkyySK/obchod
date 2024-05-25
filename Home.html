@@ -43,18 +43,30 @@
             </div>
         </div>
         <div class="slideshow-container">
-            <div class="mySlide fade">
+            <div class="mySlides fade">
                 <div class="imgnumber"> 1 / 3 </div>
-                <img src="products/iphone 15 thumbnail.jpg" style="width: 100%;">
+                <img src="products/iphone 15 thumbnail.jpg" class="thumbnail" alt="Iphone 15"">
+                <div class="text">Iphone 15</div>
             </div>
-            <div class="mySlide fade">
+            <div class="mySlides fade">
                 <div class="imgnumber"> 2 / 3 </div>
-                <img src="products/ " style="width: 100%;">
+                <img src="products/macbook air m3 thumbnail.jpg " class="thumbnail" alt="Mackbook Air M3">
+                <div class="text">Macbook air m3</div>
             </div>
-            <div class="mySlide fade">
+            <div class="mySlides fade">
                 <div class="imgnumber"> 3 / 3 </div>
-                <img src="products/iphone 15 thumbnail.jpg" style="width: 100%;">
+                <img src="products/Samsung watch thumbnail.jpg" class="thumbnail" alt="Samsung watch">
+                <div class="text">Samsung watch</div>
             </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        <div class="dot-container" style="align-items: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </div>
     <script src="script.js"></script>
