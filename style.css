@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
+    .mySlides{display: none;}
 }
 body {
     display: flex;
@@ -147,118 +148,4 @@ color: black
 
 .slideshow-container{
     width: 75%;
-}
-
-
-
-
-
-.categories-container
-
-
-
-.main {
-    padding: 20px;
-}
-
-.categories-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.category-box {
-    flex: 1 1 calc(33.333% - 40px); /* Subtracting gap to fit 3 in a row */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.back-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: 2px solid white;
-    border-radius: 20px;
-    background-color: #000000;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-}
-.category-button {
-    width: 100%;
-    padding: 20px;
-    border: 2px solid white;
-    border-radius: 20px;
-    background-color: #000000;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-    
-    
-
-}
-
-
-.section {
-    display: none;
-    padding: 20px;
-}
-
-.section h1 {
-    margin-top: 0;
-}
-
-.section p {
-    margin: 5px 0;
-}
-.category-button, .back-button, .buy-button {
-    width: 100%;
-    padding: 20px;
-    border: 2px solid white; /* White border */
-    border-radius: 20px;
-    background-color: #000000; /* Fallback color */
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-    margin: 10px 0;
-    background-image: url('button-background.jpg'); /* Path to your image */
-    background-size: cover; /* Adjust background size */
-    background-position: center; /* Center the background image */
-}
-
-.categories-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-}
-
-.category-box {
-    flex: 1 1 calc(33.333% - 40px);
-    max-width: calc(33.333% - 40px);
-    box-sizing: border-box;
-}
-
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-}
-
-.product-box {
-    flex: 1 1 calc(33.333% - 40px);
-    max-width: calc(33.333% - 40px);
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.product-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
 }
