@@ -113,6 +113,8 @@ color: black
     display: none;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    z-index: 99;
  }
  .wrapper .form-box {
     padding: 40px;
@@ -199,7 +201,7 @@ color: black
     position: relative;
     align-items: center;
     justify-content: center;
-    right: 42.5%;
+    right: 45%;
     top: 15%;
 }
 
@@ -360,9 +362,9 @@ color: black
 }
 .thumbnail{
     position: relative;
-    width: 700px;
-    height: 350px;
-    left: 65px;
+    width: 88%;
+    height: 100%;
+    left: 8%;
 
 }
 
