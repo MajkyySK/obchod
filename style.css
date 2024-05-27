@@ -238,7 +238,12 @@ color: black
 .slideshow-container{
     width: 75%;
 }
-
+.category-box h2 {
+    color: rgb(255, 255, 255); 
+}
+.category-box p {
+    color: rgb(255, 255, 255); 
+}
 
 
 
