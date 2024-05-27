@@ -350,26 +350,126 @@ color: black
     color: white;
 }
 
-.product-image {
+.product-iphone {
     width: 300px;
     height: 200px;
     border-radius: 10px;
     margin-bottom: 10px;
 }
-.product-imagea {
+.product-samsungs24 {
     width: 200px;
     height: 200px;
     border-radius: 10px;
     margin-bottom: 10px;
 }
-.product-imageb {
+.product-shovel {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-gnome {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-rake {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-oven {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+}
+.product-fridge {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-washer {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top:30px;
+}
+.product-watch {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-sony {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+.product-drone {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-fiction {
+    width: 200px;
+    height: 260px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-comics {
+    width: 200px;
+    height: 260px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-nonfiction {
+    width: 200px;
+    height: 260px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-sb {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-airforce {
     width: 200px;
     height: 150px;
     border-radius: 10px;
     margin-bottom: 10px;
     margin-top: 80px;
 }
-.product-imagec {
+.product-puma {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-tshirt {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-pants {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-cap {
     width: 200px;
     height: 230px;
     border-radius: 10px;
