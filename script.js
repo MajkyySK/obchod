@@ -48,3 +48,4 @@ function showSlide(n){
     slides[slideindex-1].style.display = "flex";
     dots[slideindex-1].style.display = "inline-block";
 }
+
