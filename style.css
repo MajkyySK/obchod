@@ -133,6 +133,22 @@ color: black
     margin: 30px 0;
 }
 
+header ion-icon {
+    color: white;        /* Set the color of the icon */
+    font-size: 24px;     /* Set the size of the icon */
+    vertical-align: middle; /* Aligns the icon vertically with adjacent text or elements */
+    margin-left: 20px;   /* Adds space to the left of the icon */
+    cursor: pointer;     /* Changes the cursor to indicate it's clickable */
+}
+
+/* Styling specific to the shopping cart icon */
+header a[href="cart.html"] {
+    float: right;       /* Positions the shopping cart icon on the right */
+    margin-right: 10px; /* Right margin for spacing from the edge or adjacent elements */
+}
+
+
+
 .home{
     display: flex;
     justify-content: center;
