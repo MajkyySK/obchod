@@ -1,76 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Obchod</title>
-</head>
-<body>
-    <header>
-        <div class="navigation"> 
-                <a class="current" href="Home.html">Home</a>
-                <a href="categories.html">Categories</a>
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About us</a>
-        </div>
-        <button class="btnLogin-popup" id="button1">Login</button>
-    </header>
-    <div class="home">
-        <div class="wrapper" id="wrapper">
-            <div class="form-box login">
-                <h2>Login</h2>
-                <form action="#">
-                    <div class="input-box">
-                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                    <input type="email" required>
-                     <label>Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <div class="remember-forgot">
-                        <label><input type="checkbox">Remember me</label>
-                        <a href="#">Forgot Password?</a>
-                    </div>
-                    <button type="submit" class="btn">Login</button>
-                    <div class="login-register">
-                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
-                    </div>
-                </form>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Obchod</title>
+    </head>
+    <body>
+        <header>
+            <div class="navigation"> 
+                    <a class="current" href="Home.html">Home</a>
+                    <a href="categories.html">Categories</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="about.html">About us</a>
             </div>
-        </div>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <div class="imgnumber"> 1 / 3 </div>
-                <img src="products/iphone 15 thumbnail.jpg" class="thumbnail" alt="Iphone 15"">
-                <div class="text">Iphone 15</div>
+            <button class="btnLogin-popup" id="button1">Login</button>
+        </header>
+        <div class="home">
+            <div class="wrapper" id="wrapper">
+                <div class="form-box login">
+                    <h2>Login</h2>
+                    <form action="#">
+                        <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">Remember me</label>
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                        <div class="login-register">
+                            <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="mySlides fade">
-                <div class="imgnumber"> 2 / 3 </div>
-                <img src="products/macbook air m3 thumbnail.jpg " class="thumbnail" alt="Mackbook Air M3">
-                <div class="text">Macbook air m3</div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="imgnumber"> 1 / 3 </div>
+                    <img src="products/iphone 15 thumbnail.jpg" class="thumbnail" alt="Iphone 15"">
+                    <div class="text">Iphone 15</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="imgnumber"> 2 / 3 </div>
+                    <img src="products/macbook air m3 thumbnail.jpg " class="thumbnail" alt="Mackbook Air M3">
+                    <div class="text">Macbook air m3</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="imgnumber"> 3 / 3 </div>
+                    <img src="products/Samsung watch thumbnail.jpg" class="thumbnail" alt="Samsung watch">
+                    <div class="text">Samsung watch</div>
+                </div>
             </div>
-            <div class="mySlides fade">
-                <div class="imgnumber"> 3 / 3 </div>
-                <img src="products/Samsung watch thumbnail.jpg" class="thumbnail" alt="Samsung watch">
-                <div class="text">Samsung watch</div>
-            </div>
-        </div>
 
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        
-        <div class="dot-container" style="align-items: center;">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            <div class="dot-container" style="align-items: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <div class="recommended-container">
+                <h1 class="recommended">Recommended</h1>
+                <div class="rec-image">
+                    <a><img src="products/Iphone 15 pro 1 .png"></a>
+                    <p>Iphone 15</p>
+                </div>
+                <div class="rec-image">
+                    <a><img src="products/CANON EOS 2000D 1 .png"></a>
+                    <p>Canon</p>
+                </div>
+                <div class="rec-image">    
+                    <a><img src="products/Jordan 1 kids .png"></a>
+                    <p>Jordans 1 kids</p>
+                </div>
+                <div class="rec-image">    
+                    <a><img src="products/Jordan 1 kids .png"></a>
+                </div>
+
+            </div>
         </div>
-    </div>
-    <script src="script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-</html>
+        <script src="script.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+    </html>

@@ -133,12 +133,10 @@ color: black
 
 .home{
     display: flex;
-    justify-content: center;
     border: 2px solid white;
     width: 70%;
-    height: 100vh;
+    height: 200vh;
     background-color: grey;
-    padding-top: 20px;
 
 }
 
@@ -196,11 +194,10 @@ color: black
 }
 .dot-container{
     display: flex;
-    position: relative;
-    align-items: center;
+    position: absolute;
     justify-content: center;
-    right: 42.5%;
-    top: 15%;
+    right: 48%;
+    top: 75%;
 }
 
 .dot {
@@ -380,9 +377,48 @@ color: black
 }
 .thumbnail{
     position: relative;
-    width: 700px;
-    height: 350px;
-    left: 65px;
+    width: 88%;
+    height: 100%;
+    left: 12%;
 
 }
 
+.recommended-container {
+    position: absolute;
+    top: 80%;
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.recommended-container h1.recommended{
+    width: 200px;
+    height: 35px;
+}
+.recommended-container img{
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    top: 20%;
+    right: 50%;
+}
+
+.recommended-container a{
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    top: 20%;
+    right: 50%;
+}
+.rec-image p{
+    position: relative;
+    top: 40%;
+    justify-content: center;
+    align-items: center;
+    right: 58%;
+}
