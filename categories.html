@@ -42,53 +42,198 @@
             </form>
         </div>
     </div>
-    <div class ="Categories">
-        <div class="Electronics">
-            <a href ="/">Electronics</a>
-            <div class="subsection">
-                <a href="/">Mobile Phones</a>
-                <a href="/">Laptops</a>
-                <a href="/">Cameras</a>
+    
+    <div id="categories" class="section">
+        <h1>Categories</h1>
+        <div class="categories-container">
+            <div class="category-box">
+                <button onclick="showSection('electronics')" class="category-button">Electronics</button>
+            </div>
+            <div class="category-box">
+                <button onclick="showSection('garden')" class="category-button">Garden Supplies</button>
+            </div>
+            <div class="category-box">
+                <button onclick="showSection('home-appliances')" class="category-button">Home Appliances</button>
+            </div>
+            <div class="category-box">
+                <button onclick="showSection('gadgets')" class="category-button">Gadgets</button>
+            </div>
+            <div class="category-box">
+                <button onclick="showSection('books')" class="category-button">Books</button>
+            </div>
+            <div class="category-box">
+                <button onclick="showSection('shoes')" class="category-button">Shoes</button>
+            </div>
+            <div class="category-box">
+                <button onclick="showSection('clothes')" class="category-button">Clothes</button>
             </div>
         </div>
-        <div class="Garden">
-            <a href ="/">Garden supplies</a> 
-            <div class="subsection">
-                <a href="/">tools</a>
-                <a href="/">Plants</a>
-                <a href="/">Furniture</a>
-            </div>
-        </div>
-        <a href ="/">Home appliences</a>
-            <div class="subsection">
-                <a href="/">Refrigerators</a>
-                <a href="/">Washing machines</a>
-                <a href="/">Microwaves</a>
-            </div>
-        <a href ="/">Gadgets</a>
-            <div class="subsection">
-                <a href="/">Smartwatches</a>
-                <a href="/">Fitness Bands</a>
-            </div>
-        <a href ="/">Books</a> 
-            <div class="subsection">
-                <a href="/">Fiction</a>
-                <a href="/">Non-fiction>
-                <a href="/">Comics</a>
-            </div>
-        <a href ="/">Shoes</a> 
-            <div class="subsection">
-                <a href="/">Men</a>
-                <a href="/">Women</a>
-                <a href="/">Kids</a>
-            </div>
-        <a href ="/">Clothes</a>
-            <div class="subsection">
-                <a href="/">Men</a>
-                <a href="/">Women</a>
-                <a href="/">Kids</a>
-            </div>
     </div>
-    <script src="script.js"></script>
+
+    <div id="electronics" class="section" style="display: none;">
+        <h1>Electronics</h1>
+        <div class="product-container">
+            <div class="product-box">
+                <img src="mobile1.jpg" alt="Mobile 1" class="product-image">
+                <h2>Mobile Phone 1</h2>
+                <p>Price: $499</p>
+                <button class="buy-button" onclick="buyProduct('Mobile Phone 1', 499)">Buy</button>
+            </div>
+            
+            <div class="product-box">
+                <img src="mobile2.jpg" alt="Mobile 2" class="product-image">
+                <h2>Mobile Phone 2</h2>
+                <p>Price: $599</p>
+                <button class="buy-button" onclick="buyProduct('Mobile Phone 2', 599)">Buy</button>
+            </div>
+            <div class="product-box">
+                <img src="mobile3.jpg" alt="Mobile 3" class="product-image">
+                <h2>Mobile Phone 3</h2>
+                <p>Price: $699</p>
+                <button class="buy-button" onclick="buyProduct('Mobile Phone 3', 699)">Buy</button>
+            </div>
+        </div>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="garden" class="section" style="display: none;">
+        <h1>Garden Supplies</h1>
+        <div class="categories-container">
+            <div class="category-box">
+                <button onclick="location.href='tools.html'" class="category-button">Garden Tools</button>
+            </div>
+            <div class="category-box">
+                <button onclick="location.href='plants.html'" class="category-button">Plants</button>
+            </div>
+            <div class="category-box">
+                <button onclick="location.href='seeds.html'" class="category-button">Seeds</button>
+            </div>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="home-appliances" class="section" style="display: none;">
+        <h1>Home Appliances</h1>
+        <div class="categories-container">
+            <div class="category-box">
+                <button onclick="location.href='kitchen.html'" class="category-button">Kitchen Appliances</button>
+            </div>
+            <div class="category-box">
+                <button onclick="location.href='laundry.html'" class="category-button">Laundry Appliances</button>
+            </div>
+            <div class="category-box">
+                <button onclick="location.href='vacuum.html'" class="category-button">Vacuum Cleaners</button>
+            </div>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gadgets" class="section" style="display: none;">
+        <h1>Gadgets</h1>
+        <div class="categories-container">
+            <div class="category-box">
+                <button onclick="location.href='smart-watches.html'" class="category-button">Smart Watches</button>
+            </div>
+            <div class="category-box">
+                <button onclick="location.href='headphones.html'" class="category-button">Headphones</button>
+            </div>
+            <div class="category-box">
+                <button onclick="location.href='drones.html'" class="category-button">Drones</button>
+            </div>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="books" class="section" style="display: none;">
+        <h1>Books</h1>
+        <div class="categories-container">
+            <div class="category-box">
+                <button onclick="location.href='fiction.html'" class="category-button">Fiction</button>
+            </div>
+            <div class="category-box">
+                <button onclick="location.href='non-fiction.html'" class="category-button">Non-Fiction</button>
+            </div>
+            <div class="category-box">
+                <button onclick="location.href='comics.html'" class="category-button">Comics</button>
+            </div>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="shoes" class="section" style="display: none;">
+        <h1>Shoes</h1>
+        <div class="categories-container">
+            <div class="category-box">
+                <button onclick="location.href='men.html'" class="category-button">Men</button>
+            </div>
+            <div class="category-box">
+                <button onclick="location.href='women.html'" class="category-button">Women</button>
+            </div>
+            <div class="category-box">
+                <button onclick="location.href='kids.html'" class="category-button">Kids</button>
+            </div>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="clothes" class="section" style="display: none;">
+        <h1>Clothes</h1>
+        <div class="categories-container">
+            <div class="category-box">
+                <button onclick="location.href='men-clothes.html'" class="category-button">Men</button>
+            </div>
+            <div class="category-box">
+                <button onclick="location.href='women-clothes.html'" class="category-button">Women</button>
+            </div>
+            <div class="category-box">
+                <button onclick="location.href='kids-clothes.html'" class="category-button">Kids</button>
+            </div>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+    
+    
+    function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+
+        function buyProduct(productName, productPrice) {
+            alert('You have bought ' + productName + ' for $' + productPrice);
+        } 
+
+
+    // Show the default section (categories) on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        showSection('categories');
+        
+    });
+    
+</script>
 </body>
 </html>
