@@ -15,6 +15,8 @@ function log(){
         wrapper.style.display = "none";
     }
 }
+<<<<<<< HEAD
+=======
 
 let slideindex = 1;
 showSlide(slideindex);
@@ -48,3 +50,4 @@ function showSlide(n){
     slides[slideindex-1].style.display = "flex";
     dots[slideindex-1].style.display = "inline-block";
 }
+>>>>>>> fd32f3d2bce658f0854654a40d1d8c887dea8240
