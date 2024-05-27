@@ -23,5 +23,4 @@ if (fwrite($file, $data) === FALSE) {
     echo "Record saved.";
 }
 fclose($file);
-}
 ?>
