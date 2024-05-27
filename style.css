@@ -355,8 +355,8 @@ color: black
 }
 .thumbnail{
     position: relative;
-    width: 700px;
-    height: 350px;
+    width: 88%;
+    height: 100%;
     left: 65px;
 
 }
