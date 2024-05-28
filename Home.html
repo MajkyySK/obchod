@@ -7,29 +7,32 @@
     <title>Obchod</title>
 </head>
 <body>
-    <header>
-        <div class="navigation"> 
-                <a class="current" href="Home.html">Home</a>
-                <a href="categories.html">Categories</a>
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About us</a>
-        </div>
-        <button class="btnLogin-popup" id="button1">Login</button>
-        <a href="shop.html"><ion-icon name="cart-outline"></ion-icon></a>
-    </header>
-    <div class="home">
-        <div class="wrapper" id="wrapper">
-            <div class="form-box login">
-                <h2>Login</h2>
-                <form action="#">
-                    <div class="input-box">
+<header>
+    <div class="navigation"> 
+            <a class="current" href="Home.html">Home</a>
+            <button class="catbut">Categories</button>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About us</a>
+    </div>
+    <button class="btnLogin-popup" id="button1">Login</button>
+    <a href="shop.html"><ion-icon name="cart-outline"></ion-icon></a>
+</header>
+<div class="home">
+    <div class="wrapper" id="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="login.php" method="post">
+                <div class="input-box">
                     <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                    <input type="email" required>
+                    <input type="email" name="email" required>
                      <label>Email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                        <input type="password" required>
+                        <input type="password" name="password" required>
                         <label>Password</label>
                     </div>
                     <div class="remember-forgot">
@@ -42,55 +45,284 @@
                     </div>
                 </form>
             </div>
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="register.php" method="post">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" name="text" required>
+                         <label>Username</label>
+                        </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" name="email" required>
+                         <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                            <input type="password" name="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">agree to the terms & conditions</label>
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <div class="login-register">
+                            <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                        </div>
+                    </form>
+                </div>
         </div>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <div class="imgnumber"> 1 / 3 </div>
-                <img src="products/iphone 15 thumbnail.jpg" class="thumbnail" alt="Iphone 15"">
-                <div class="text">Iphone 15</div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="imgnumber"> 1 / 3 </div>
+            <img src="products/iphone 15 thumbnail.jpg" class="thumbnail" alt="Iphone 15"">
+            <div class="text">Iphone 15</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="imgnumber"> 2 / 3 </div>
+            <img src="products/macbook air m3 thumbnail.jpg " class="thumbnail" alt="Mackbook Air M3">
+            <div class="text">Macbook air m3</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="imgnumber"> 3 / 3 </div>
+            <img src="products/Samsung watch thumbnail.jpg" class="thumbnail" alt="Samsung watch">
+            <div class="text">Samsung watch</div>
+        </div>
+    </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        <div class="dot-container" style="align-items: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <div class="recommended-container">
+            <h1 class="recommended">Recommended</h1>
+            <div class="rec-image">
+                <a><img src="products/Iphone 15 pro 1 .png"></a>
+                <p>Iphone 15</p>
             </div>
-            <div class="mySlides fade">
-                <div class="imgnumber"> 2 / 3 </div>
-                <img src="products/macbook air m3 thumbnail.jpg " class="thumbnail" alt="Mackbook Air M3">
-                <div class="text">Macbook air m3</div>
+            <div class="rec-image">
+                <a><img src="products/CANON EOS 2000D 1 .png"></a>
+                <p>Canon</p>
             </div>
-            <div class="mySlides fade">
-                <div class="imgnumber"> 3 / 3 </div>
-                <img src="products/Samsung watch thumbnail.jpg" class="thumbnail" alt="Samsung watch">
-                <div class="text">Samsung watch</div>
+            <div class="rec-image">    
+                <a><img src="products/Jordan 1 kids .png"></a>
+                <p>Jordans 1 kids</p>
+            </div>
+            <div class="rec-image">    
+                <a><img src="products/Jordan 1 kids .png"></a>
             </div>
         </div>
+    </div>
+    <div id="categories" class="section" style="display: none;">
+        <h1>Categories</h1>
+        <div class="categories-container">
+            <div class="category-box">
+                <button onclick="showSection('electronics')" class="category-button">Electronics</button>
+            </div>
+            <div class="category-box">
+                <button onclick="showSection('garden')" class="category-button">Garden Supplies</button>
+            </div>
+            <div class="category-box">
+                <button onclick="showSection('home-appliances')" class="category-button">Home Appliances</button>
+            </div>
+            <div class="category-box">
+                <button onclick="showSection('gadgets')" class="category-button">Gadgets</button>
+            </div>
+            <div class="category-box">
+                <button onclick="showSection('books')" class="category-button">Books</button>
+            </div>
+            <div class="category-box">
+                <button onclick="showSection('shoes')" class="category-button">Shoes</button>
+            </div>
+            <div class="category-box">
+                <button onclick="showSection('clothes')" class="category-button">Clothes</button>
+            </div>
+        </div>
+    </div>
 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div id="electronics" class="section" style="display: none;">
+        <h1>Electronics</h1>
+        <div class="product-container">
+            <div class="product-box">
+                <img src="products/iphone 15 pro 3.png" alt="Iphone" class="product-iphone">
+                <h2>Iphone 15 pro</h2>
+                <p>Price: €999</p>
+                <button class="buy-button" >Buy</button>
+            </div>
             
-            <div class="dot-container" style="align-items: center;">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+            <div class="product-box">
+                <img src="products/macbook air m3 thumbnail.jpg" alt="Macbook " class="product-iphone">
+                <h2>Macbook m3</h2>
+                <p>Price: €1299</p>
+                <button class="buy-button" >Buy</button>
             </div>
-            <div class="recommended-container">
-                <h1 class="recommended">Recommended</h1>
-                <div class="rec-image">
-                    <a><img src="products/Iphone 15 pro 1 .png"></a>
-                    <p>Iphone 15</p>
-                </div>
-                <div class="rec-image">
-                    <a><img src="products/CANON EOS 2000D 1 .png"></a>
-                    <p>Canon</p>
-                </div>
-                <div class="rec-image">    
-                    <a><img src="products/Jordan 1 kids .png"></a>
-                    <p>Jordans 1 kids</p>
-                </div>
-                <div class="rec-image">    
-                    <a><img src="products/Jordan 1 kids .png"></a>
-                </div>
-
+            <div class="product-box">
+                <img src="products/Samsung s24.png" alt="Mobile 3" class="product-samsungs24">
+                <h2>Samsung s24</h2>
+                <p>Price: €999</p>
+                <button class="buy-button" >Buy</button>
             </div>
         </div>
-        <script src="script.js"></script>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    </body>
-    </html>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+    </div>
+
+    <div id="garden" class="section" style="display: none;">
+        <h1>Garden Supplies</h1>
+        <div class="product-container">
+            <div class="product-box">
+                <img src="products/shovel.png" alt="Mobile 2" class="product-shovel">
+                <h2>Shovel</h2>
+                <p>Price: €49</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <div class="product-box">
+                <img src="products/gnome.png" alt="Mobile 2" class="product-gnome">
+                <h2>Gnome </h2>
+                <p>Price: €30</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <div class="product-box">
+                <img src="products/rake.png" alt="Mobile 2" class="product-rake">
+                <h2>Rake</h2>
+                <p>Price: €20</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+    </div>
+
+    <div id="home-appliances" class="section" style="display: none;">
+        <h1>Home Appliances</h1>
+        <div class="product-container">
+            <div class="product-box">
+                <img src="products/oven.png" alt="Mobile 2" class="product-oven">
+                <h2>Oven</h2>
+                <p>Price: €299</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <div class="product-box">
+                <img src="products/fridge.png" alt="Mobile 2" class="product-fridge">
+                <h2>Fridge</h2>
+                <p>Price: €999</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <div class="product-box">
+                <img src="products/Pracka 1 .png" alt="Mobile 2" class="product-washer">
+                <h2>Washer</h2>
+                <p>Price: €499</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+    </div>
+
+    <div id="gadgets" class="section" style="display: none;">
+        <h1>Gadgets</h1>
+        <div class="product-container">
+            <div class="product-box">
+                <img src="products/Samsung watch 1.png" alt="Mobile 2" class="product-watch">
+                <h2>Watch</h2>
+                <p>Price: €199</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <div class="product-box">
+                <img src="products/XM 5.png" alt="Mobile 2" class="product-sony">
+                <h2>Headphones</h2>
+                <p>Price: €299</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <div class="product-box">
+                <img src="products/DJI.png" alt="Mobile 2" class="product-drone">
+                <h2>Drone</h2>
+                <p>Price: €399</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+    </div>
+
+    <div id="books" class="section" style="display: none;">
+        <h1>Books</h1>
+        <div class="product-container">
+            <div class="product-box">
+                <img src="products/Fiction.png" alt="Mobile 2" class="product-fiction">
+                <h2>Fiction</h2>
+                <p>Price: €12</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <div class="product-box">
+                <img src="products/Comics.png" alt="Mobile 2" class="product-comics">
+                <h2>Comics</h2>
+                <p>Price: €10</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <div class="product-box">
+                <img src="products/Non-fiction.png" alt="Mobile 2" class="product-nonfiction">
+                <h2>Kids</h2>
+                <p>Price: €5</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+    </div>
+
+    <div id="shoes" class="section" style="display: none;">
+        <h1>Shoes</h1>
+        <div class="product-container">
+            <div class="product-box">
+                <img src="products/Nike Airforce .png" alt="Mobile 2" class="product-airforce">
+                <h2>Nike</h2>
+                <p>Price: €100</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <div class="product-box">
+                <img src="products/Nike SB 2.png" alt="Mobile 2" class="product-sb">
+                <h2>Nike SB</h2>
+                <p>Price: €70</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <div class="product-box">
+                <img src="products/Puma.png" alt="Mobile 2" class="product-puma">
+                <h2>Puma</h2>
+                <p>Price: €80</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+    </div>
+
+    <div id="clothes" class="section" style="display: none;">
+        <h1>Clothes</h1>
+        <div class="product-container">
+            <div class="product-box">
+                <img src="products/T-shirt.png" alt="Mobile 2" class="product-tshirt">
+                <h2>T-shirt</h2>
+                <p>Price: €10</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <div class="product-box">
+                <img src="products/Pants.png" alt="Mobile 2" class="product-pants">
+                <h2>Pants</h2>
+                <p>Price: €30</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <div class="product-box">
+                <img src="products/cap.png" alt="Mobile 2" class="product-cap">
+                <h2>Cap</h2>
+                <p>Price: €12</p>
+                <button class="buy-button" >Buy</button>
+            </div>
+            <button onclick="showSection('categories')" class="back-button">Back</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
