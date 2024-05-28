@@ -84,3 +84,7 @@ header .logo {
 .section p {
     margin: 5px 0;
 }
+
+.product-box h2, .product-box p {
+    color: white;
+}
