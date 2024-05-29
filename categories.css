@@ -38,9 +38,7 @@ header .logo {
     cursor: pointer;
 }
 
-.main {
-    padding: 20px;
-}
+
 
 .categories-container {
     display: flex;
