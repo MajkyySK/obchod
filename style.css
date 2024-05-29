@@ -471,7 +471,7 @@ header a[href="cart.html"] {
 .section p {
     margin: 5px 0;
 }
-.category-button, .back-button, .buy-button {
+.category-button, .back-button, .buy-button ,.buy-button2{
     width: 100%;
     padding: 20px;
     border: 2px solid white; /* White border */
@@ -717,4 +717,10 @@ header a[href="cart.html"] {
 
 .grid-item p {
     margin: 0;
+}
+.buy-button2{
+    position: relative;
+    margin-left: -180px;
+    margin-top: 250px;
+    border-radius: 100px;
 }
