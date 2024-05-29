@@ -299,6 +299,9 @@ header a[href="cart.html"] {
     position: relative;
     max-width: 1000px;
     margin: 75px;
+    img{
+        border-radius: 16px 16px;
+    }
 
 }
 
@@ -637,6 +640,7 @@ header a[href="cart.html"] {
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
 .thumbnail{
     position: relative;
     width: 915px;
@@ -648,10 +652,13 @@ header a[href="cart.html"] {
 .recommended-container {
     position: absolute;
     top: 80%;
-    padding: 2%;
+    padding: 5%;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 65px;
+    img{
+        border-radius: 26px 26px;
+    }
 }
 
 .recommended-container h1.recommended{
