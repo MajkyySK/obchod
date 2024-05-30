@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: black;
+    background-color: rgb(19, 18, 18);
 }
 
 header{
@@ -41,7 +41,8 @@ header{
     position: relative;
 }
 
-.navigation a {
+.navigation a,
+.navigation button{
     text-align: center;
     font-size: 1.1em;
     color: white;
@@ -49,8 +50,12 @@ header{
     font-weight: 500;
     margin-left: 40px;
     position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
-.navigation a::after{
+.navigation a::after,
+.navigation button::after{
     content: '';
     position: absolute;
     left: 0;
@@ -67,7 +72,11 @@ header{
     display: none;
 }
 
-.navigation a.current{
+
+
+
+.navigation a.current,
+.navigation button.current{
     content: '';
     position: relative;
     left: 0;
@@ -80,7 +89,8 @@ header{
     justify-content: center;
     align-items: end;
 }
-.navigation a:hover::after{
+.navigation a:hover::after,
+.navigation button:hover::after{
     transform: scaleX(1);
 }
 
@@ -97,43 +107,186 @@ header{
     font-weight: 500;
     transition: .5s;
 }
-.btnLogin-popup:hover {
-background: white;
-color: black
-}
-
 .wrapper {
+    position: absolute;
+    z-index: 100;
+    right: 40%;
+    top: 15%;
     width: 400px;
-    height: 440px;
+    height: 500px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    z-index: 99;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+ }
+ .wrapper.active-popup {
+    transform: scale(1);
+ }
+
+ .wrapper.active {
+    height: 520px;
  }
  .wrapper .form-box {
+    width: 100%;
     padding: 40px;
+ }
+
+
+ .wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+ }
+
+ .wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+ }
+
+ .wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+ }
+ .wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+
+ }
+ .wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: rgb(227, 224, 224);
+    font-size: 1em;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
  }
 .form-box h2 {
     font-size: 2em;
     color: white;
     text-align: center;
-    opacity: 100%;
 }
 .input-box {
     position: relative;
     width: 100%;
     height: 50px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     margin: 30px 0;
 }
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
 
-.home{
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: white;
+    line-height: 57px;
+}
+.remember-forgot{
+    font-size: .9em;
+    color: white;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input{
+    accent-color: white;
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: white;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background: rgb(228, 228, 236);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+.login-register{
+    font-size: .9em;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-register p a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-register p a:hover {
+    text-decoration: underline;
+} 
+
+
+
+header ion-icon {
+    color: white;        /* Set the color of the icon */
+    font-size: 24px;     /* Set the size of the icon */
+    vertical-align: middle; /* Aligns the icon vertically with adjacent text or elements */
+    margin-left: 20px;   /* Adds space to the left of the icon */
+    cursor: pointer;     /* Changes the cursor to indicate it's clickable */
+}
+
+/* Styling specific to the shopping cart icon */
+header a[href="cart.html"] {
+    float: right;       /* Positions the shopping cart icon on the right */
+    margin-right: 10px; /* Right margin for spacing from the edge or adjacent elements */
+}
+
+
+
+.home, .contact, .about{
     display: flex;
     border: 2px solid white;
     width: 70%;
@@ -146,6 +299,10 @@ color: black
     position: relative;
     max-width: 1000px;
     margin: 75px;
+    img{
+        border-radius: 16px 16px;
+    }
+
 }
 
 .prev, .next {
@@ -174,7 +331,7 @@ color: black
 
 
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    color: black;
 }
 
 .text {
@@ -198,8 +355,8 @@ color: black
     display: flex;
     position: absolute;
     justify-content: center;
-    right: 48%;
-    top: 75%;
+    right: 50%;
+    top: 77%;
 }
 
 .dot {
@@ -244,12 +401,6 @@ color: black
 .category-box p {
     color: rgb(255, 255, 255); 
 }
-
-
-
-
-.categories-container
-
 
 
 .main {
@@ -297,12 +448,24 @@ color: black
 
 
 .section {
-    display: none;
+    position: absolute;
     padding: 20px;
+    z-index: 100;
+    top: 18%;
+    z-index: 2;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    width: 50%;
+
 }
 
+
 .section h1 {
+    padding: 10px;
     margin-top: 0;
+    color: white;
 }
 
 .section p {
@@ -349,18 +512,139 @@ color: black
     max-width: calc(33.333% - 40px);
     box-sizing: border-box;
     text-align: center;
+    color: white;
 }
 
-.product-image {
-    width: 100%;
-    height: auto;
+.product-iphone {
+    width: 300px;
+    height: 200px;
     border-radius: 10px;
     margin-bottom: 10px;
 }
+.product-samsungs24 {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-shovel {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-gnome {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-rake {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-oven {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+}
+.product-fridge {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-washer {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top:30px;
+}
+.product-watch {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-sony {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+.product-drone {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-fiction {
+    width: 200px;
+    height: 260px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-comics {
+    width: 200px;
+    height: 260px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-nonfiction {
+    width: 200px;
+    height: 260px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-sb {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-airforce {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 80px;
+}
+.product-puma {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-tshirt {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-pants {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-cap {
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
 .thumbnail{
     position: relative;
-    width: 88%;
-    height: 100%;
+    width: 915px;
+    height: 500px;
     left: 12%;
 
 }
@@ -368,10 +652,13 @@ color: black
 .recommended-container {
     position: absolute;
     top: 80%;
-    padding: 2%;
+    padding: 5%;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 65px;
+    img{
+        border-radius: 26px 26px;
+    }
 }
 
 .recommended-container h1.recommended{
@@ -403,4 +690,120 @@ color: black
     justify-content: center;
     align-items: center;
     right: 58%;
+}
+
+.container{
+    position: absolute;
+    display: block;
+    width: 70%;
+    margin-bottom: 30px;
+    z-index: 2;
+    top: 10%;
+    left: 70%;
+}
+#root{
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.sidebar{
+    width: 40%;
+    border-radius: 5px;
+    background-color: rgb(202, 200, 200);
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+}
+.head{
+    background-color: black;
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.foot{
+
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid gray;
+}
+
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: none;
+    width: 200px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+#product{
+    display: none;
+}
+
+.cart{
+    border: none;
+    background: none;
+}
+
+.shoppingcart{
+    display: none;
+}
+
+.buy-button2{
+    width: 100px;
+    padding: 20px;
+    border: 2px solid white; /* White border */
+    border-radius: 20px;
+    background-color: #000000; /* Fallback color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    right: 65%;
+    top: 45%;
+    text-align: center;
+    background-image: url('button-background.jpg'); /* Path to your image */
+    background-size: cover; /* Adjust background size */
+    background-position: center; /* Center the background image */
+}
+
+.about {
+    background: #ffffff;
+    color: #333;
+    padding: 21px;
+    margin: -23px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+     
+}
+
+.about h2 {
+    text-align: center;
+    color: #000000;
+    margin-right: 10%;
+}
+
+.grid-item {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+   
+}
+
+.grid-item p {
+    margin: 0;
 }
