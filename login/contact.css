@@ -15,14 +15,20 @@
     margin:0 auto;
 }
 .container h2{
+    position: relative;
     font-size: 36px;
     margin-bottom: 40px;
     color: black;
+    right: 90%;
+    top: 50px;
 }
 .contact-wrapper{
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
+    right: 80%;
+    top: 50px;
 }
 .contact-form{
     text-align: left;

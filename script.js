@@ -24,6 +24,7 @@ iconClose.addEventListener('click', ()=> {
 });
 
 
+
 let slideindex = 1;
 showSlide(slideindex);
 
@@ -57,7 +58,6 @@ function showSlide(n){
     dots[slideindex-1].style.display = "inline-block";
 }
 
-
 const catbut = document.querySelector(".catbut");
 
 function showSection(sectionId) {
@@ -76,14 +76,13 @@ function showSection(sectionId) {
 let categories = document.querySelector("#categories");
 catbut.onclick = close;
 function close(){
-    if(categories.style.display === "none" ||categories.style.display ==="none"){
+    if(categories.style.display === "none" ||categories.style.display ===""){
         showSection('categories');
     }
     else{
         categories.style.display = "none";
     }
 }
-
 
 function addtocart(productId) {
     var productElements = document.getElementsByClassName("product");
@@ -92,6 +91,26 @@ function addtocart(productId) {
         var product = productElements[i];
         if (product.id === productId) {
             product.style.display = "inline-block";
+
+        }
+    }
+}
+
+let price = document.getElementById('total');
+
+function total(productPrice, productId) {
+    let currentPrice = parseFloat(price.innerText.replace('€ ', ''));
+
+    let newTotal = currentPrice + productPrice;
+
+    price.innerText = '€ ' + newTotal.toFixed(2);
+    var productElements = document.getElementsByClassName("product");
+    
+    for (var i = 0; i < productElements.length; i++) {
+        var product = productElements[i];
+        if (product.id === productId) {
+            product.style.display = "inline-block";
+
         }
     }
 }
@@ -109,6 +128,18 @@ function yes(){
     }
 
 }
+
+
+const submit = document.getElementById('submit');
+
+submit.onclick = no;
+
+const people = document.querySelector('.people-icon');
+function no(){
+    btnPopup.style.display = "none";
+    people.style.display = "block";
+}
+
 
 
 

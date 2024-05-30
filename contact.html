@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <title>Responsive Contact Us Page</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Obchod</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link rel="stylesheet" type="text/css" href="login/contact.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <header>
@@ -20,27 +22,92 @@
     </header>
     
     <div class="contact">
-        <h2>Contact Information</h2>
-        <p><strong>Phone:</strong> +421 123 456 789</p>
-        <p><strong>Email:</strong> contact@obchod.com</p>
-        <p><strong>Address:</strong> Stefana Kukuru 154/14 071 01 Michalovce </p>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-phone"></i>+421 111 111 111</p>
+                    <p><i class="fas fa-envelope"></i>info@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i>Michalovce 55</p>
+                </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </div>
+        </div>
+    </div>
 
         <div class="wrapper" id="wrapper">
+            <span class="icon-close">
+                <ion-icon name="close"></ion-icon>
+            </span>
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="login.php" method="post">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" name="email" required>
+                        <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                            <input type="password" name="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">Remember me</label>
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                        <div class="login-register">
+                            <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-box register">
+                    <h2>Registration</h2>
+                    <form action="register.php" method="post">
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="person"></ion-icon></span>
+                            <input type="text" name="text" required>
+                            <label>Username</label>
+                            </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="email" name="email" required>
+                            <label>Email</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                                <input type="password" name="password" required>
+                                <label>Password</label>
+                            </div>
+                            <div class="remember-forgot">
+                                <label><input type="checkbox">agree to the terms & conditions</label>
+                                <a href="#">Forgot Password?</a>
+                            </div>
+                            <button type="submit" class="btn">Register</button>
+                            <div class="login-register">
+                                <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+            <div class="wrapper" id="wrapper">
             <span class="icon-close">
                 <ion-icon name="close"></ion-icon>
             </span>

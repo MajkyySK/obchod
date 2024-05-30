@@ -11,11 +11,12 @@
         <img src="products/Logoo.png" class="logo" style="height: 50px;">
         <div class="navigation"> 
                 <a class="current" href="Home.html">Home</a>
-                <a href="categories.html">Categories</a>
+                <button class="catbut">Categories</button>
                 <a href="contact.html">Contact</a>
                 <a href="about.html">About us</a>
         </div>
         <button class="btnLogin-popup" id="button1">Login</button>
+        <ion-icon name="people-outline" class="people-icon"></ion-icon>
         <button class="cart"><ion-icon name="cart-outline"></ion-icon></button>
     </header>
     <div class="container shoppingcart">
@@ -23,26 +24,6 @@
         <div class="sidebar">
             <div class="head"><p>My cart</p></div>
             <div id="cartItem">Your cart is empty</div>
-            <div class="product-box product">
-                <img src="products/Iphone 15 pro 1 .png" class="product-iphone">
-                <h2>Iphone 15 pro</h2>
-                <p>Price: €999</p>
-            </div>
-            <div class="product-box product" id="nikesb">
-                <img src="products/Nike SB 2.png" class="product-sb">
-                <h2>Nike SB</h2>
-                <p>Price: €70</p>
-            </div>
-            <div class="product-box product" id="headphone">    
-                <img src="products/Xm 5.png" class="product-sony">
-                <h2>Sony XM 5</h2>
-                <p>Price: €299</p>
-            </div>
-            <div class="product-box product" id="puma">    
-                <img src="products/Puma.png" class="product-puma">
-                <h2>Puma</h2>
-                <p>Price: €80</p>
-            </div>
             <div class="product-box product" id="iphone">
                 <img src="products/iphone 15 pro 3.png" alt="Iphone" class="product-iphone">
                 <h2>Iphone 15 pro</h2>
@@ -89,53 +70,53 @@
                 <h2>Washer</h2>
                 <p>Price: €499</p>
             </div>
-            <div class="product-box" id="product" id="watch">
+            <div class="product-box product" id="watch">
                 <img src="products/Samsung watch 1.png" alt="Mobile 2" class="product-watch">
                 <h2>Watch</h2>
                 <p>Price: €199</p>
             </div>
-            <div class="product-box" id="product" id="headphone">
+            <div class="product-box product" id="headphone">
                 <img src="products/XM 5.png" alt="Mobile 2" class="product-sony">
                 <h2>Headphones</h2>
                 <p>Price: €299</p>
             </div>
-            <div class="product-box" id="product" id="">
+            <div class="product-box product" id="drone">
                 <img src="products/DJI.png" alt="Mobile 2" class="product-drone">
                 <h2>Drone</h2>
                 <p>Price: €399</p>
             </div>
-            <div class="product-box" id="product" id="">
+            <div class="product-box product"id="fiction">
                 <img src="products/Fiction.png" alt="Mobile 2" class="product-fiction">
                 <h2>Fiction</h2>
                 <p>Price: €12</p>
                 <button  class="buy-button" >Buy</button>
             </div>
-            <div class="product-box" id="product" id="">
+            <div class="product-box product" id="comics">
                 <img src="products/Comics.png" alt="Mobile 2" class="product-comics">
                 <h2>Comics</h2>
                 <p>Price: €10</p>
             </div>
-            <div class="product-box" id="product" id="">
+            <div class="product-box product" id="">
                 <img src="products/Non-fiction.png" alt="Mobile 2" class="product-nonfiction">
                 <h2>Kids</h2>
                 <p>Price: €5</p>
             </div>
-            <div class="product-box" id="product" id="">
+            <div class="product-box product"id="nike">
                 <img src="products/Nike Airforce .png" alt="Mobile 2" class="product-airforce">
                 <h2>Nike</h2>
                 <p>Price: €100</p>
             </div>
-            <div class="product-box" id="product" id="">
+            <div class="product-box product"id="nikesb">
                 <img src="products/Nike SB 2.png" alt="Mobile 2" class="product-sb">
                 <h2>Nike SB</h2>
                 <p>Price: €70</p>
             </div>
-            <div class="product-box" id="product" id="">
+            <div class="product-box product"id="puma">
                 <img src="products/Puma.png" alt="Mobile 2" class="product-puma">
                 <h2>Puma</h2>
                 <p>Price: €80</p>
             </div>
-            <div class="product-box" id="product" id="">
+            <div class="product-box product" id="tshirt">
                 <img src="products/T-shirt.png" alt="Mobile 2" class="product-tshirt">
                 <h2>T-shirt</h2>
                 <p>Price: €10</p>
@@ -168,35 +149,66 @@
             </div>
             <div class="foot">
                 <h3>Total</h3>
-                <h2 id="total">$ 0.00</h2>
+                <h2 id="total">€ 0.00</h2>
             </div>
 
         </div>
     </div>
     <div class="home">
         <div class="wrapper" id="wrapper">
+            <span class="icon-close">
+                <ion-icon name="close"></ion-icon>
+            </span>
             <div class="form-box login">
                 <h2>Login</h2>
-                <form action="#">
+                <form action="login.php" method="post">
                     <div class="input-box">
-                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                    <input type="email" required>
-                     <label>Email</label>
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" name="email" required>
+                        <label>Email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                        <input type="password" required>
+                        <input type="password" name="password" required>
                         <label>Password</label>
                     </div>
                     <div class="remember-forgot">
                         <label><input type="checkbox">Remember me</label>
                         <a href="#">Forgot Password?</a>
                     </div>
-                    <button type="submit" class="btn">Login</button>
+                    <button id="submit" type="submit" class="btn">Login</button>
                     <div class="login-register">
                         <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
                     </div>
                 </form>
+            </div>
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="register.php" method="post">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" name="text" required>
+                        <label>Username</label>
+                        </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" name="email" required>
+                        <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                            <input type="password" name="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">agree to the terms & conditions</label>
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <div class="login-register">
+                            <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                        </div>
+                    </form>
             </div>
         </div>
         <div class="slideshow-container">
@@ -231,25 +243,19 @@
                     <a><img src="products/Iphone 15 pro 1 .png" class="recommended-iphone"></a>
                     <p>Iphone 15 pro</p>
                     <p>Price: €999</p>
-                    <button onclick = "addtocart('iphone')" class="buy-button2" >Buy</button>
+                    <button onclick="total(999,'iphone')" class="buy-button2" >Buy</button>
                 </div>
                 <div class="rec-image">
                     <a><img src="products/Nike SB 2.png"></a>
                     <p>Nike SB</p>
                     <p>Price: €70</p>
-                    <button onclick = "addtocart('nikesb')" class="buy-button2" >Buy</button>
+                    <button onclick="total(999,'nikesb')" class="buy-button2" >Buy</button>
                 </div>
                 <div class="rec-image">    
                     <a><img src="products/Xm 5.png"></a>
                     <p>Sony XM 5</p>
                     <p>Price: €299</p>
-                    <button onclick = "addtocart('headphone')" class="buy-button2" >Buy</button>
-                </div>
-                <div class="rec-image">    
-                    <a><img src="products/Puma.png"></a>
-                    <p>Puma</p>
-                    <p>Price: €80</p>
-                    <button onclick = "addtocart('puma')" class="buy-button2" >Buy</button>
+                    <button onclick = "total(299, 'headphone')" class="buy-button2" >Buy</button>
                 </div>
             </div>
         </div>
@@ -287,20 +293,20 @@
                     <img src="products/iphone 15 pro 3.png" alt="Iphone" class="product-iphone">
                     <h2>Iphone 15 pro</h2>
                     <p>Price: €999</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(999, 'iphone')" class="buy-button" >Buy</button>
                 </div>
                 
                 <div class="product-box">
                     <img src="products/macbook air m3 thumbnail.jpg" alt="Macbook " class="product-iphone">
                     <h2>Macbook m3</h2>
                     <p>Price: €1299</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(1299, 'macbook')" class="buy-button" >Buy</button>
                 </div>
                 <div class="product-box">
                     <img src="products/Samsung s24.png" alt="Mobile 3" class="product-samsungs24">
                     <h2>Samsung s24</h2>
                     <p>Price: €999</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(999, 'samsung')" class="buy-button" >Buy</button>
                 </div>
             </div>
                 <button onclick="showSection('categories')" class="back-button">Back</button>
@@ -314,19 +320,19 @@
                     <img src="products/shovel.png" alt="Mobile 2" class="product-shovel">
                     <h2>Shovel</h2>
                     <p>Price: €49</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(49, 'shovel')" class="buy-button" >Buy</button>
                 </div>
                 <div class="product-box">
                     <img src="products/gnome.png" alt="Mobile 2" class="product-gnome">
                     <h2>Gnome </h2>
                     <p>Price: €30</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(30, 'gnome')" class="buy-button" >Buy</button>
                 </div>
                 <div class="product-box">
                     <img src="products/rake.png" alt="Mobile 2" class="product-rake">
                     <h2>Rake</h2>
                     <p>Price: €20</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(20, 'rake')" class="buy-button" >Buy</button>
                 </div>
                 <button onclick="showSection('categories')" class="back-button">Back</button>
             </div>
@@ -339,19 +345,19 @@
                     <img src="products/oven.png" alt="Mobile 2" class="product-oven">
                     <h2>Oven</h2>
                     <p>Price: €299</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(299)" onclick ="addtocart('')" class="buy-button" >Buy</button>
                 </div>
                 <div class="product-box">
                     <img src="products/fridge.png" alt="Mobile 2" class="product-fridge">
                     <h2>Fridge</h2>
                     <p>Price: €999</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(999)" onclick ="addtocart('')" class="buy-button" >Buy</button>
                 </div>
                 <div class="product-box">
                     <img src="products/Pracka 1 .png" alt="Mobile 2" class="product-washer">
                     <h2>Washer</h2>
                     <p>Price: €499</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(499)" onclick ="addtocart('')" class="buy-button" >Buy</button>
                 </div>
                 <button onclick="showSection('categories')" class="back-button">Back</button>
             </div>
@@ -364,19 +370,19 @@
                     <img src="products/Samsung watch 1.png" alt="Mobile 2" class="product-watch">
                     <h2>Watch</h2>
                     <p>Price: €199</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(199)" onclick ="addtocart('')" class="buy-button" >Buy</button>
                 </div>
                 <div class="product-box">
                     <img src="products/XM 5.png" alt="Mobile 2" class="product-sony">
                     <h2>Headphones</h2>
                     <p>Price: €299</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(299)" onclick ="addtocart('')" class="buy-button" >Buy</button>
                 </div>
                 <div class="product-box">
                     <img src="products/DJI.png" alt="Mobile 2" class="product-drone">
                     <h2>Drone</h2>
                     <p>Price: €399</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(399)" onclick ="addtocart('drone')" class="buy-button" >Buy</button>
                 </div>
                 <button onclick="showSection('categories')" class="back-button">Back</button>
             </div>
@@ -389,19 +395,19 @@
                     <img src="products/Fiction.png" alt="Mobile 2" class="product-fiction">
                     <h2>Fiction</h2>
                     <p>Price: €12</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(12)" onclick ="addtocart('fiction')" class="buy-button" >Buy</button>
                 </div>
                 <div class="product-box">
                     <img src="products/Comics.png" alt="Mobile 2" class="product-comics">
                     <h2>Comics</h2>
                     <p>Price: €10</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(10)" onclick ="addtocart('comics')" class="buy-button" >Buy</button>
                 </div>
                 <div class="product-box">
                     <img src="products/Non-fiction.png" alt="Mobile 2" class="product-nonfiction">
                     <h2>Kids</h2>
                     <p>Price: €5</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(5)" onclick ="addtocart('kids')" class="buy-button" >Buy</button>
                 </div>
                 <button onclick="showSection('categories')" class="back-button">Back</button>
             </div>
@@ -414,19 +420,19 @@
                     <img src="products/Nike Airforce .png" alt="Mobile 2" class="product-airforce">
                     <h2>Nike</h2>
                     <p>Price: €100</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(100)" onclick ="addtocart('nike')" class="buy-button" >Buy</button>
                 </div>
                 <div class="product-box">
                     <img src="products/Nike SB 2.png" alt="Mobile 2" class="product-sb">
                     <h2>Nike SB</h2>
                     <p>Price: €70</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(70)" onclick ="addtocart('nikesb')" class="buy-button" >Buy</button>
                 </div>
                 <div class="product-box">
                     <img src="products/Puma.png" alt="Mobile 2" class="product-puma">
                     <h2>Puma</h2>
                     <p>Price: €80</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(80)" onclick ="addtocart('puma')" class="buy-button" >Buy</button>
                 </div>
                 <button onclick="showSection('categories')" class="back-button">Back</button>
             </div>
@@ -439,19 +445,19 @@
                     <img src="products/T-shirt.png" alt="Mobile 2" class="product-tshirt">
                     <h2>T-shirt</h2>
                     <p>Price: €10</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(10)" onclick ="addtocart('tshirt')" class="buy-button" >Buy</button>
                 </div>
                 <div class="product-box">
                     <img src="products/Pants.png" alt="Mobile 2" class="product-pants">
                     <h2>Pants</h2>
                     <p>Price: €30</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick="total(30)" onclick ="addtocart('pants')" class="buy-button" >Buy</button>
                 </div>
                 <div class="product-box">
                     <img src="products/cap.png" alt="Mobile 2" class="product-cap">
                     <h2>Cap</h2>
                     <p>Price: €12</p>
-                    <button class="buy-button" >Buy</button>
+                    <button onclick ="addtocart('cap')" class="buy-button" >Buy</button>
                 </div>
                 <button onclick="showSection('categories')" class="back-button">Back</button>
             </div>

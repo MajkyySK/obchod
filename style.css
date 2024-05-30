@@ -309,7 +309,7 @@ header a[href="cart.html"] {
 
     cursor: pointer;
     position: absolute;
-    top: 45%;
+    top: 50%;
     width: 75px;
     padding: 16px;
     margin-top: -22px;
@@ -320,12 +320,12 @@ header a[href="cart.html"] {
 }
 
 .next{
-    left: 155vh;
+    left: 160vh;
     border-radius: 3px 0 0 3px;
 }
 
 .prev{
-    right: 154vh;
+    right: 159vh;
     border-radius: 3px 0 0 3px;
 }
 
@@ -643,9 +643,10 @@ header a[href="cart.html"] {
 
 .thumbnail{
     position: relative;
-    width: 915px;
-    height: 500px;
-    left: 12%;
+    width: 690px;
+    height: 350px;
+    left: 12.2%;
+    top: 0px;
 
 }
 
@@ -691,6 +692,7 @@ header a[href="cart.html"] {
     align-items: center;
     right: 58%;
 }
+
 
 .container{
     position: absolute;
@@ -808,3 +810,15 @@ header a[href="cart.html"] {
     margin: 0;
 }
 
+.people-icon{
+    display: none;
+    position: relative;
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.1em;
+    color:white;
+    font-weight: 500;
+    transition: .5s;
+}
