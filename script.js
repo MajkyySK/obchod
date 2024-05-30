@@ -85,10 +85,30 @@ function close(){
 }
 
 
-
+function addtocart(productId) {
+    var productElements = document.getElementsByClassName("product");
     
+    for (var i = 0; i < productElements.length; i++) {
+        var product = productElements[i];
+        if (product.id === productId) {
+            product.style.display = "inline-block";
+        }
+    }
+}
 
+const cart = document.querySelector(".cart");
+const shoppingcart = document.querySelector(".shoppingcart")
+cart.onclick = yes;
 
+function yes(){
+    if(shoppingcart.style.display === "none" || shoppingcart.style.display === ""){
+        shoppingcart.style.display = "block";
+    }
+    else{
+        shoppingcart.style.display = "none";
+    }
+
+}
 
 
 
