@@ -38,9 +38,7 @@ header .logo {
     cursor: pointer;
 }
 
-.main {
-    padding: 20px;
-}
+
 
 .categories-container {
     display: flex;
@@ -88,3 +86,7 @@ header .logo {
 .product-box h2, .product-box p {
     color: white;
 }
+.product-box h2, .product-box p {
+    color: white;
+}
+
