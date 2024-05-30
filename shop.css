@@ -14,16 +14,17 @@ body{
 .header{
     height: 80px;
     width: 70%;
-    background-color: black;
+    background-color: rgb(19, 18, 18);
     border-radius: 3px;
     margin: 30px 0px;
     display: flex;
-    align-items: center;
+    align-items: flex;
     justify-content: space-between;
     padding: 15px;
 }
 .header .logo{
     font-size: 30px;
+    margin-left: -35%;
     font-weight: bold;
     color: white;
 }
@@ -37,7 +38,7 @@ body{
     width: 80px;
 }
 .fa-solid{
-    color: black;
+    color: rgb(0, 0, 0);
 }
 .cart p{
     height: 22px;
