@@ -2,19 +2,27 @@
 let slides = document.querySelectorAll(".mySlides")
 let dots = document.querySelectorAll(".dot")
 
-const button1 = document.querySelector("#button1"); 
-const wrapper = document.querySelector("#wrapper");
-    
-button1.onclick= log;
+const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+const btnPopup = document.querySelector('.btnLogin-popup');
+const iconClose = document.querySelector('.icon-close');
 
-function log(){
-    if(wrapper.style.display==="none" || wrapper.style.display === ""){
-        wrapper.style.display = "flex";
-    }
-    else{
-        wrapper.style.display = "none";
-    }
-}
+registerLink.addEventListener('click', ()=> {
+    wrapper.classList.add('active');
+});
+
+loginLink.addEventListener('click', ()=> {
+    wrapper.classList.remove('active');
+});
+
+btnPopup.addEventListener('click', ()=> {
+    wrapper.classList.add('active-popup');
+});
+iconClose.addEventListener('click', ()=> {
+    wrapper.classList.remove('active-popup');
+});
+
 
 let slideindex = 1;
 showSlide(slideindex);
@@ -45,7 +53,43 @@ function showSlide(n){
 
     }
 
-    slides[slideindex-1].style.display = "flex";
+    slides[slideindex-1].style.display = 'flex';
     dots[slideindex-1].style.display = "inline-block";
 }
+
+
+const catbut = document.querySelector(".catbut");
+
+function showSection(sectionId) {
+    // Hide all sections
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(function(section) {
+        section.style.display = 'none';
+    });
+
+    var selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
+}
+
+let categories = document.querySelector("#categories");
+catbut.onclick = close;
+function close(){
+    if(categories.style.display === "none" ||categories.style.display ==="none"){
+        showSection('categories');
+    }
+    else{
+        categories.style.display = "none";
+    }
+}
+
+
+
+    
+
+
+
+
+
 
